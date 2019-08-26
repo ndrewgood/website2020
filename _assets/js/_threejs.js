@@ -1,187 +1,162 @@
-          //initial set up of variables
+(function() {
+	'use strict';
+	/* 	'To actually be able to display anything with Three.js, we need three things:
+		A scene, a camera, and a renderer so we can render the scene with the camera.' 
+	   		
+	   		- https://threejs.org/docs/#Manual/Introduction/Creating_a_scene 		*/
+
+	var scene, camera, renderer;
+
+	/* We need this stuff too */
+	var container, aspectRatio,
+		HEIGHT, WIDTH, fieldOfView,
+		nearPlane, farPlane,
+		mouseX, mouseY, windowHalfX,
+		windowHalfY, stats, geometry,
+		starStuff, materialOptions, stars, speed;
+
+	init();
+	animate();
+
+	function init() {
+
+
+		HEIGHT = window.innerHeight / 1.5 ;
+		WIDTH = window.innerWidth / 1.5;
+		aspectRatio = WIDTH / HEIGHT;
+		fieldOfView = 75;
+		nearPlane = 1;
+		farPlane = 1000;
+		mouseX = 0;
+		mouseY = 0;
+        speed = 30;
+
+		windowHalfX = WIDTH / 2;
+		windowHalfY = HEIGHT / 2;
+
+	/* 	fieldOfView — Camera frustum vertical field of view.
+			aspectRatio — Camera frustum aspect ratio.
+			nearPlane — Camera frustum near plane.
+			farPlane — Camera frustum far plane.	
+
+			- https://threejs.org/docs/#Reference/Cameras/PerspectiveCamera
+
+		 	In geometry, a frustum (plural: frusta or frustums) 
+		 	is the portion of a solid (normally a cone or pyramid) 
+		 	that lies between two parallel planes cutting it. - wikipedia.		*/
+
+		camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);
+
+		//Z positioning of camera
+
+		camera.position.z = farPlane / 2;
+		
+		scene = new THREE.Scene({antialias:true});
+        scene.background = new THREE.Color( 0x000000 );
+		scene.fog = new THREE.FogExp2( 0x000000, 0.0003 );
+
+		// The wizard's about to get busy.
+		starForge();
+		
+		//check for browser Support
+		if (webGLSupport()) {
+			//yeah?  Right on...
+			renderer = new THREE.WebGLRenderer({alpha: true});
+
+		} else {
+			//No?  Well that's okay.
+			renderer = new THREE.CanvasRenderer();
+		}
+
+		renderer.setClearColor(0x000011, 1);
+		renderer.setPixelRatio(window.devicePixelRatio);
+		renderer.setSize( WIDTH, HEIGHT);
+		container = document.getElementById( 'hero-bg' );
+		document.getElementById("hero").appendChild(container);
+		container.appendChild( renderer.domElement );
+
+		window.addEventListener( 'resize', onWindowResize, false );
+		// document.addEventListener( 'mousemove', onMouseMove, false );
+		
+	}
+
+	function animate() {
+		requestAnimationFrame(animate);
+		render();
+	}
+
+
+	function render() {
+		camera.position.x += speed * 0.005;
+		camera.position.y += speed * 0.005;
+		camera.lookAt( scene.position );
+		renderer.render(scene, camera);
+	}
+
+	function webGLSupport() {
+		/* 	The wizard of webGL only bestows his gifts of power
+			to the worthy.  In this case, users with browsers who 'get it'.		*/
+
+		try {
+			var canvas = document.createElement('canvas');
+			return !!(window.WebGLRenderingContext && (
+				canvas.getContext('webgl') || canvas.getContext('experimental-webgl'))
+			);
+		} catch(e) {
+			// console.warn('Hey bro, for some reason we\'re not able to use webGL for this.  No biggie, we\'ll use canvas.');
+			return false;
+		}
+	}
 
-			var camera, scene, renderer, stats, group, container;
+	function onWindowResize() {
 
-            //sets up where the mouse's X and Y value are initially
+		// Everything should resize nicely if it needs to!
+	  	var WIDTH = window.innerWidth,
+	  		HEIGHT = window.innerHeight;
 
-			var mouseX = 0, mouseY = 0;
+	  	camera.aspect = aspectRatio;
+	  	camera.updateProjectionMatrix();
+	  	renderer.setSize(WIDTH, HEIGHT);
+	}
 
-            //sets up var for half weight and height
+	function starForge() {
+		/* 	Yep, it's a Star Wars: Knights of the Old Republic reference,
+			are you really surprised at this point? 
+													*/
+		var starQty = 45000;
+			geometry = new THREE.SphereGeometry(1000, 100, 50);
 
-			var windowHalfX = window.innerWidth / 2;
-			var windowHalfY = window.innerHeight / 2;
+	    	materialOptions = {
+	    		size: 1.0, //I know this is the default, it's for you.  Play with it if you want.
+	    		transparency: true, 
+	    		opacity: .5,
+                color: 0xdcedf5
+	    	};
 
-            //basically setup(); and draw();
+	    	starStuff = new THREE.PointCloudMaterial(materialOptions);
 
-			init();
-			animate();
+		// The wizard gaze became stern, his jaw set, he creates the cosmos with a wave of his arms
 
-			function init() {
+		for (var i = 0; i < starQty; i++) {		
 
-                //  1). creates perspective camera with
-                //          FOV = 60
-                //          aspect ratio of width/height
-                //          near and far value
-                //  2). sets the camera at a Z of 500
+			var starVertex = new THREE.Vector3();
+			starVertex.x = Math.random() * 2000 - 1000;
+			starVertex.y = Math.random() * 2000 - 1000;
+			starVertex.z = Math.random() * 2000 - 1000;
 
-				camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 1, 10000 );
-				camera.position.z = 500;
+			geometry.vertices.push(starVertex);
 
-                // initalizes a scene
-                // sets scene background color
-                // sets fog color and values
+		}
 
-				scene = new THREE.Scene();
-				scene.background = new THREE.Color( 0xFFFFFF );
-				scene.fog = new THREE.Fog( 0x00000, 1, 10000 );
 
-                // creates box geometry with a width, height, and depth of 100
-                // creates a normal material
+		stars = new THREE.PointCloud(geometry, starStuff);
+		scene.add(stars);
+	}
 
-				var geometry = new THREE.IcosahedronBufferGeometry( 100);
-				var material = new THREE.MeshPhysicalMaterial( { color: 0x6033D9 } );
+	// function onMouseMove(e) {
 
-                // initilizes a group
+	// 	mouseX = e.clientX - windowHalfX;
+	// 	mouseY = e.clientY - windowHalfY;
+	// }	
 
-				group = new THREE.Group();
-
-                //for loop which loops 1000 times
-
-				for ( var i = 0; i < 200; i ++ ) {
-
-                    // For every i, it creates:
-                    //     a mesh(which combines geo and mat)
-                    //     a random x, y, and z for said mesh
-                    //     a random x and y rotation for said mesh
-                    //     sets matrix auto update as false (?)
-                    //     updates the matrix
-                    //     adds the mesh to the group
-
-
-					var mesh = new THREE.Mesh( geometry, material );
-					mesh.position.x = Math.random() * 2000 - 1000;
-					mesh.position.y = Math.random() * 2000 - 1000;
-					mesh.position.z = Math.random() * 2000 - 1000;
-
-					mesh.rotation.x = Math.random() * 2 * Math.PI;
-					mesh.rotation.y = Math.random() * 2 * Math.PI;
-
-					mesh.matrixAutoUpdate = false;
-					mesh.updateMatrix();
-
-					group.add( mesh );
-
-				}
-
-                // adds group to scene
-
-                scene.add( group );
-                
-                var light = new THREE.PointLight( 0xF4D0CD, 7, 1000 );
-                light.position.set( 0, 0, 0 );
-                scene.add( light );
-
-
-
-				// creates a renderer (with antialiasing)
-                // sets pixel ratio
-                // sets renderer width and height
-                // appends renderer to dom
-
-				renderer = new THREE.WebGLRenderer( { antialias: true, preserveDrawingBuffer: true } );
-                // renderer.autoClearColor = false;
-                renderer.setPixelRatio( window.devicePixelRatio );
-                renderer.setSize( window.innerWidth, 500);
-                container = document.getElementById( 'hero-bg' );
-                document.getElementById("hero").appendChild(container);
-				container.appendChild( renderer.domElement );
-
-				//creates a stat box
-
-				// stats = new Stats();
-				// document.body.appendChild( stats.dom );
-
-				// adds MouseMove event listener
-
-				document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-
-				// adds resize event listener
-
-				window.addEventListener( 'resize', onWindowResize, false );
-
-			}
-
-			function onWindowResize() {
-
-                //updates Half X and Half Y var
-            
-            	windowHalfX = window.innerWidth / 2;
-				windowHalfY = window.innerHeight / 2;
-
-                //updates camera aspect ratio
-
-				camera.aspect = window.innerWidth / window.innerHeight;
-				camera.updateProjectionMatrix();
-
-                // updates renderer size
-
-				renderer.setSize( window.innerWidth, window.innerHeight );
-
-			}
-
-			function onDocumentMouseMove( event ) {
-
-                // distorts mouse move (?) 
-
-				mouseX = ( event.clientX - windowHalfX ) * 10;
-				mouseY = ( event.clientY - windowHalfY ) * 10;
-
-			}
-
-			//
-
-			function animate() {
-
-                // requests animation frame
-                // renders every frame
-                // updates stats
-
-				requestAnimationFrame( animate );
-
-				render();
-				// stats.update();
-
-			}
-
-			function render() {
-
-                //sets up time using date()
-
-				var time = Date.now() * 0.001;
-
-                //creates variables with sin to rotate seemingly "random"
-
-				var rx = Math.sin( time * 0.7 ) * 0.5,
-					ry = Math.sin( time * 0.3 ) * 0.5,
-					rz = Math.sin( time * 0.2 ) * 0.5;
-
-                // moves camera according to mouseX and mouseY (set before in mousemove)
-
-				camera.position.x += ( mouseX - camera.position.x ) * 0.05;
-				camera.position.y += ( - mouseY - camera.position.y ) * 0.05;
-
-                // keeps camera looking at center of scene
-
-				camera.lookAt( scene.position );
-
-                //rotates group with variables set preivously
-
-				group.rotation.x = rx;
-				group.rotation.y = ry;
-				group.rotation.z = rz;
-
-                //renders scene through renderer
-
-				renderer.render( scene, camera );
-
-			}
+})();
