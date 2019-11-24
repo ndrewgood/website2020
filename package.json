@@ -1,8 +1,8 @@
 {
   "name": "website2020",
   "version": "1.0.0",
-  "description": "Website 2020",
-  "main": "index.html",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,26 +12,15 @@
   },
   "author": "Andrew Goodridge",
   "license": "ISC",
-  "devDependencies": {},
-  "dependencies": {
-    "@dogstudio/highway": "^2.1.3",
-    "browser-sync": "^2.26.3",
-    "del": "^3.0.0",
-    "gsap": "^3.0.1",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-clean-css": "4.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^5.0.3",
-    "gulp-plumber": "^1.2.1",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.1",
-    "jquery": "^3.4.1"
-  },
   "bugs": {
     "url": "https://github.com/andrewg8/website2020/issues"
   },
-  "homepage": "https://github.com/andrewg8/website2020#readme"
+  "homepage": "https://github.com/andrewg8/website2020#readme",
+  "devDependencies": {
+    "sass": "^1.23.7"
+  },
+  "dependencies": {
+    "@dogstudio/highway": "^2.1.3",
+    "gsap": "^3.0.1"
+  }
 }
