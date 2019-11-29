@@ -1,0 +1,58 @@
+//mobile
+.mobileNav {
+    display: none;
+    
+}
+
+.mobileNavBlock {
+    width: 50vw !important;
+    cursor: pointer;
+}
+
+.mobileCat {
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+    nav {
+        display: none !important;
+        position: fixed;
+        background-color: white;
+    }
+
+    .mobileNav {
+        display: inline-flex !important;
+    }
+
+    .content {
+        display: none !important;
+    }
+
+    .container {
+        width: 100vw !important;
+    }
+
+    .sideCat {
+        display: none !important;
+    }
+
+    .workList {
+        width: 100vw;
+    }
+
+    .workItem {
+        height: 300px;
+    }
+
+    .mobileCat {
+        display: flex;
+        height: 150px;
+
+    }
+
+    .cat p {
+        transform: rotate(0) !important;
+        z-index: -100;
+    }
+
+}
