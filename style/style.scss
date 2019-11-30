@@ -85,4 +85,44 @@ main {
     align-items: center;
 }
 
+.playList {
+    width: 50vw;
+    display: grid;
+    height: calc(100vh - 100px);
+}
 
+.aboutItem {
+    height: 20vh;
+}
+
+.socialList {
+    height: calc(60vh - 100px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.socialItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    height: 100%;
+}
+
+.aboutContent {
+    position: relative !important;
+    width: 100vw;
+    height: 500px !important;
+}
+
+.aboutContainer {
+    display: block !important;
+}
+
+.aboutList {
+    margin-top: 0px !important;
+}

@@ -1,5 +1,6 @@
 .mobileNav {
   display: none;
+  z-index: 100;
 }
 
 .mobileNavBlock {
@@ -9,6 +10,64 @@
 
 .mobileCat {
   display: none;
+}
+
+.mobileContent {
+  display: none;
+  height: 300px;
+  width: 100vw;
+  position: fixed;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuContainer {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-color: white;
+}
+
+.visible {
+  display: inline !important;
+}
+
+.invisible {
+  display: none !important;
+}
+
+.mNavTop {
+  height: 25vh;
+  width: 100vw;
+  display: inline-flex;
+}
+
+.mNavTopBlock {
+  height: 100%;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.mNavBlock {
+  height: 25vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.mNavBlock {
+  color: black;
+}
+
+.theEnd {
+  height: 500px !important;
 }
 
 @media only screen and (max-width: 800px) {
@@ -36,6 +95,7 @@
 
   .workList {
     width: 100vw;
+    margin-top: 300px;
   }
 
   .workItem {
@@ -50,6 +110,29 @@
   .cat p {
     transform: rotate(0) !important;
     z-index: -100;
+  }
+
+  .mobileContent {
+    display: flex;
+  }
+
+  .mobileContainer {
+    display: flex;
+    margin-top: 100px;
+  }
+
+  .aboutItem {
+    height: 200px;
+  }
+
+  .articleSideBar {
+    display: none;
+  }
+
+  .articleContent {
+    margin-top: 100px;
+    margin-left: 0px !important;
+    width: 100vw !important;
   }
 }
 

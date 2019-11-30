@@ -1,0 +1,45 @@
+.articleSideBar {
+    margin-top: 100px;
+    width: 100px;
+    height: calc(100vh - 100px);
+    position: fixed;
+}
+
+.articleContent {
+    margin-top: 100px;
+    margin-left: 100px;
+    width: calc(100vw - 100px);
+    text-align: center;
+    font-size: 60px;
+}
+
+.articleNav {
+    position: fixed;
+    background-color: white;
+    z-index: 10;
+}
+
+.sideBarLeft, .sideBarRight, .sideBarUp {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -10;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.sideBarTitle {
+    height: calc(100vh - 400px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sideBarTitle p {
+    margin: 0;
+    padding: 0;
+    transform: rotate(-90deg);
+}

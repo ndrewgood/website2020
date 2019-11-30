@@ -5,27 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./style/style.scss">
     <link rel="stylesheet" href="./style/border.scss">
+    <link rel="stylesheet" href="./style/mobile.scss">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <title>Andrews Test</title>
 </head>
 <body>
+  <div class="menuContainer">
+    <div class="mNavTop border-bottom">
+      <div class="mNavTopBlock border-right">menu</div>
+      <div class="mNavTopBlock menuX">X</div>
+    </div>
+    <div class="mNavList">
+      <a href="/index.html" class="mNavBlock border-bottom">
+        <p>work</p>
+      </a>
+      <a href="/play.html" class="mNavBlock border-bottom">
+        <p>play</p>
+      </a>
+      <a href="/about.html" class="mNavBlock border-bottom">
+        <p>about</p>
+      </a>
+    </div>
+  </div>
+  <nav id="mobileNav" class="mobileNav nav border-bottom">
+      <a href="/index.html" class="navBlock mobileNavBlock border-right">
+        <p>@ndrewgood</p>
+      </a>
+      <div class="navBlock mobileNavBlock menuButton">
+        <p>☰</p>
+      </div>
+  </nav>
   <nav class="nav border-bottom">
     <a href="/index.html" class="navBlock border-right">
       <p>@ndrewgood</p>
     </a>
-    <a href="/index.html" class="navBlock border-right">
+    <a href="/index.html" class="navBlock">
       <p>work</p>
     </a>
-    <a href="/play.html" class="navBlock border-right">
+    <a href="/play.html" class="navBlock border-right border-left">
       <p>play</p>
     </a>
     <a href="/about.html" class="navBlock">
       <p>about</p>
     </a>
   </nav>
-  <main>
-    <section class="container left">
+  <main id="main">
+    <section class="container mobileContainer">
+      <div class="mobileContent border-bottom">
+          <h1>Some of the many things I spend my time on in my free time.</h1>
+      </div>
+    <div class="workList playList">
+      <a href="#" class="workItem border-bottom">
+        <p>Chaos and the Butterfly</p>
+      </a>
+      <a href="#" class="workItem border-bottom">
+        <p>Best Albums of 2019</p>
+      </a>
+      <a href="#" class="workItem border-bottom">
+        <p>Code Art</p>
+      </a>
+      <a href="#" class="workItem border-bottom">
+        <p>Drumline</p>
+      </a>
+      <div class="mobileCat cat border-bottom theEnd">
+        <p>the end</p>
+    </div>
+    </div>
     </section>
-    <section class="container rightc border-left"></section>
+    <section class="container content border-left">
+      <div class="contentContainer">
+        <h1>Some of the many things I spend my time on in my free time.</h1>
+      </div>
+    </section>
   </main>
 </body>
 

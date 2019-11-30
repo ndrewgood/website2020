@@ -6,14 +6,34 @@
     <link rel="stylesheet" href="/style.e0c02e61.css">
     <link rel="stylesheet" href="/border.496c28e7.css">
     <link rel="stylesheet" href="/mobile.d48667c4.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <title>Andrews Test</title>
-<script src="/style.e0c02e61.js"></script><script src="/border.496c28e7.js"></script><script src="/mobile.d48667c4.js"></script></head>
+</head>
 <body>
-  <nav class="mobileNav nav border-bottom">
+  <div class="menuContainer">
+    <div class="mNavTop border-bottom">
+      <div class="mNavTopBlock border-right">menu</div>
+      <div class="mNavTopBlock menuX">X</div>
+    </div>
+    <div class="mNavList">
+      <a href="/index.html" class="mNavBlock border-bottom">
+        <p>work</p>
+      </a>
+      <a href="/play.html" class="mNavBlock border-bottom">
+        <p>play</p>
+      </a>
+      <a href="/about.html" class="mNavBlock border-bottom">
+        <p>about</p>
+      </a>
+    </div>
+  </div>
+  <nav id="mobileNav" class="mobileNav nav border-bottom">
       <a href="/index.html" class="navBlock mobileNavBlock border-right">
         <p>@ndrewgood</p>
       </a>
-      <div class="navBlock mobileNavBlock">
+      <div class="navBlock mobileNavBlock menuButton">
         <p>☰</p>
       </div>
   </nav>
@@ -21,20 +41,20 @@
     <a href="/index.html" class="navBlock border-right">
       <p>@ndrewgood</p>
     </a>
-    <a href="/index.html" class="navBlock border-right">
+    <a href="/index.html" class="navBlock">
       <p>work</p>
     </a>
-    <a href="/play.html" class="navBlock border-right">
+    <a href="/play.html" class="navBlock border-right border-left">
       <p>play</p>
     </a>
     <a href="/about.html" class="navBlock">
       <p>about</p>
     </a>
   </nav>
-  <main>
-    <section class="container">
-      <div>
-        
+  <main id="main">
+    <section class="container mobileContainer">
+      <div class="mobileContent border-bottom">
+          <h1>This is a placeholder for the fun stuff.</h1>
       </div>
       <div class="sideCat border-right">
         <div class="cat border-bottom">
@@ -48,7 +68,7 @@
       <div class="mobileCat cat border-bottom">
           <p>UX Work</p>
       </div>
-      <a href="#" class="workItem border-bottom">
+      <a href="/pages\work\ProjectTurf.html" class="workItem border-bottom">
         <p>Project Turf</p>
       </a>
       <a href="#" class="workItem border-bottom">
@@ -60,9 +80,12 @@
       <a href="#" class="workItem border-bottom">
         <p>FLUX club</p>
       </a>
-      <a href="#" class="workItem">
+      <a href="#" class="workItem border-bottom">
         <p>CoMotion 2020</p>
       </a>
+      <div class="mobileCat cat theEnd">
+        <p>the end</p>
+    </div>
     </div>
     </section>
     <section class="container content border-left">
