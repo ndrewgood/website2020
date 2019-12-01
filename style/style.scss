@@ -1,7 +1,15 @@
+@import url("https://use.typekit.net/qrb3wez.css");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&display=swap');
+
 body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.bold {
+    font-weight: 700;
 }
 
 .nav {
@@ -20,11 +28,23 @@ body {
     text-decoration: none;
 }
 
+.navBlock:hover {
+    background-color: black;
+    p {
+        color:white;
+        transform: rotate(-15deg);
+    }
+}
+
 .navBlock p {
     color: black;
-    font-family: sans-serif;
     font-size: 18px;
 }
+
+.navBlock p:hover {
+    
+}
+
 
 section {
     width: 50vw;
@@ -46,6 +66,7 @@ main {
     height: 100%;
     display: flex;
     flex-direction: column;
+    font-style: italic;
 }
 .cat {
     width: 100%;
@@ -69,10 +90,21 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: gitan-latin, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;
 }
 
 .workItem {
     text-decoration: none;
+}
+
+.workItem:hover {
+    background-color: black;
+    p {
+        color: white;
+    }
 }
 
 .workItem p {
@@ -111,6 +143,15 @@ main {
     text-decoration: none;
     text-align: center;
     height: 100%;
+    color: black;
+}
+
+.socialItem p {
+    font-family: gitan-latin, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;
+    color: black;
 }
 
 .aboutContent {
@@ -125,4 +166,107 @@ main {
 
 .aboutList {
     margin-top: 0px !important;
+}
+
+.contentContainer {
+    padding: 5vw;
+}
+
+.contentContainer h1 {
+    font-family: gitan-latin, sans-serif;
+    font-weight: 500 !important;
+    font-style: italic;
+    font-size: 35px;
+    margin-bottom: 0px;
+}
+
+.contentContainer h2 {
+    margin-top: 10px;
+    font-family: gitan-latin, sans-serif;
+    font-weight: 500 !important;
+    font-style: normal;
+}
+
+.memojiFace {
+    width: 100%;
+    height: 150px;
+    background-image: url(../assets/img/memoji.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 100px;
+}
+
+.memojiFace:hover {
+    background-image: url(../assets/img/memoji2.png);
+    cursor: url(../assets/img/cursorHeart.png), pointer;
+}
+
+.noDisplay {
+    display: none !important;
+}
+
+.hoverImage {
+    width: 50vw;
+    height: calc(100vh - 100px);
+}
+
+.socialItem:hover {
+    p {
+        color: white;
+    }
+}
+
+.hoverPT {
+    background-color: blue;
+}
+
+.hoverLW {
+    background-color: red;
+}
+
+.hoverFLUX {
+    background-color: yellow;
+}
+
+.hoverCO {
+    background-color: green;
+}
+
+.hoverCATB {
+    background-color: blue;
+}
+
+.hoverBA19 {
+    background-color: red;
+}
+
+.hoverCODE {
+    background-color: yellow;
+}
+
+.hoverDRUM {
+    background-color: green;
+}
+
+.hoverEND {
+    background-color: cyan;
+}
+
+#ig:hover{
+    background-color: #da3a91;
+}
+
+#gh:hover{
+    background-color: #2c3395;
+}
+
+#li:hover{
+    background-color: #2a7ae7;
+    border-top: solid black 2px;
+}
+
+#sp:hover{
+    background-color: #19e33a;
+    border-top: solid black 2px;
 }
