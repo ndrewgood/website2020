@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../Users/Surface/AppData/Roaming/npm/node_modules/parcel-bundler/node_modules/process/browser.js":[function(require,module,exports) {
+})({"../../../../../usr/local/lib/node_modules/parcel/node_modules/process/browser.js":[function(require,module,exports) {
 
 // shim for using process in browser
 var process = module.exports = {}; // cached from whatever global is present so that test runners that stub it
@@ -10929,7 +10929,7 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
-},{"process":"../../Users/Surface/AppData/Roaming/npm/node_modules/parcel-bundler/node_modules/process/browser.js"}],"js/index.js":[function(require,module,exports) {
+},{"process":"../../../../../usr/local/lib/node_modules/parcel/node_modules/process/browser.js"}],"js/index.js":[function(require,module,exports) {
 "use strict";
 
 require("jquery");
@@ -11058,12 +11058,48 @@ $(window).scroll(function () {
       wS = $(this).scrollTop();
 
   if (wS > hT + hH - wH && hT > wS && wS + wH > hT + hH) {
-    $('h1').addClass('view');
+    $('#mobileThumb').addClass('hoverLW');
   } else {
-    $('h1').removeClass('view');
+    $('#mobileThumb').removeClass('hoverLW');
   }
 });
-},{"jquery":"node_modules/jquery/dist/jquery.js"}],"../../Users/Surface/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+$(window).scroll(function () {
+  var hT = $('#pt').offset().top,
+      hH = $('#pt').outerHeight(),
+      wH = $(window).height(),
+      wS = $(this).scrollTop();
+
+  if (wS > hT + hH - wH && hT > wS && wS + wH > hT + hH) {
+    $('#mobileThumb').addClass('hoverPT');
+  } else {
+    $('#mobileThumb').removeClass('hoverPT');
+  }
+});
+$(window).scroll(function () {
+  var hT = $('#flux').offset().top,
+      hH = $('#flux').outerHeight(),
+      wH = $(window).height(),
+      wS = $(this).scrollTop();
+
+  if (wS > hT + hH - wH && hT > wS && wS + wH > hT + hH) {
+    $('#mobileThumb').addClass('hoverFLUX');
+  } else {
+    $('#mobileThumb').removeClass('hoverFLUX');
+  }
+});
+$(window).scroll(function () {
+  var hT = $('#co').offset().top,
+      hH = $('#co').outerHeight(),
+      wH = $(window).height(),
+      wS = $(this).scrollTop();
+
+  if (wS > hT + hH - wH && hT > wS && wS + wH > hT + hH) {
+    $('#mobileThumb').addClass('hoverCO');
+  } else {
+    $('#mobileThumb').removeClass('hoverCO');
+  }
+});
+},{"jquery":"node_modules/jquery/dist/jquery.js"}],"../../../../../usr/local/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -11091,7 +11127,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51083" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51103" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -11267,5 +11303,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../Users/Surface/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/index.js"], null)
+},{}]},{},["../../../../../usr/local/lib/node_modules/parcel/src/builtins/hmr-runtime.js","js/index.js"], null)
 //# sourceMappingURL=/js.00a46daa.js.map
