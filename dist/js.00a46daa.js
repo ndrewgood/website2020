@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../../../../usr/local/lib/node_modules/parcel/node_modules/process/browser.js":[function(require,module,exports) {
+})({"../../Users/Surface/AppData/Roaming/npm/node_modules/parcel-bundler/node_modules/process/browser.js":[function(require,module,exports) {
 
 // shim for using process in browser
 var process = module.exports = {}; // cached from whatever global is present so that test runners that stub it
@@ -10929,7 +10929,7 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
-},{"process":"../../../../../usr/local/lib/node_modules/parcel/node_modules/process/browser.js"}],"js/index.js":[function(require,module,exports) {
+},{"process":"../../Users/Surface/AppData/Roaming/npm/node_modules/parcel-bundler/node_modules/process/browser.js"}],"js/index.js":[function(require,module,exports) {
 "use strict";
 
 require("jquery");
@@ -10956,54 +10956,54 @@ $(".menuX").click(function () {
 $(function () {
   $('#pt').hover(function () {
     $('.memojiFace').addClass("noDisplay");
-    $('#hello').addClass("noDisplay");
-    $('#moreHello').addClass("noDisplay");
+    $('.hello').addClass("noDisplay");
+    $('.moreHello').addClass("noDisplay");
     $('#hoverImage').addClass("hoverImage hoverPT");
   }, function () {
     $('.memojiFace').removeClass("noDisplay");
-    $('#hello').removeClass("noDisplay");
-    $('#moreHello').removeClass("noDisplay");
+    $('.hello').removeClass("noDisplay");
+    $('.moreHello').removeClass("noDisplay");
     $('#hoverImage').removeClass("hoverImage hoverPT");
   });
-}); //hover Best Albums of 2019
+}); //hover LiveWhale
 
 $(function () {
   $('#lw').hover(function () {
     $('.memojiFace').addClass("noDisplay");
-    $('#hello').addClass("noDisplay");
-    $('#moreHello').addClass("noDisplay");
+    $('.hello').addClass("noDisplay");
+    $('.moreHello').addClass("noDisplay");
     $('#hoverImage').addClass("hoverImage hoverLW");
   }, function () {
     $('.memojiFace').removeClass("noDisplay");
-    $('#hello').removeClass("noDisplay");
-    $('#moreHello').removeClass("noDisplay");
+    $('.hello').removeClass("noDisplay");
+    $('.moreHello').removeClass("noDisplay");
     $('#hoverImage').removeClass("hoverImage hoverLW");
   });
-}); //hover Code Art
+}); //hover flux
 
 $(function () {
   $('#flux').hover(function () {
     $('.memojiFace').addClass("noDisplay");
-    $('#hello').addClass("noDisplay");
-    $('#moreHello').addClass("noDisplay");
+    $('.hello').addClass("noDisplay");
+    $('.moreHello').addClass("noDisplay");
     $('#hoverImage').addClass("hoverImage hoverFLUX");
   }, function () {
     $('.memojiFace').removeClass("noDisplay");
-    $('#hello').removeClass("noDisplay");
-    $('#moreHello').removeClass("noDisplay");
+    $('.hello').removeClass("noDisplay");
+    $('.moreHello').removeClass("noDisplay");
     $('#hoverImage').removeClass("hoverImage hoverFLUX");
   });
-}); //hover Drumline
+}); //hover comotion
 
 $(function () {
   $('#co').hover(function () {
     $('.memojiFace').addClass("noDisplay");
-    $('#hello').addClass("noDisplay");
-    $('#moreHello').addClass("noDisplay");
+    $('.hello').addClass("noDisplay");
+    $('.moreHello').addClass("noDisplay");
     $('#hoverImage').addClass("hoverImage hoverCO");
   }, function () {
     $('.memojiFace').removeClass("noDisplay");
-    $('#hello').removeClass("noDisplay");
+    $('.hello').removeClass("noDisplay");
     $('#moreHello').removeClass("noDisplay");
     $('#hoverImage').removeClass("hoverImage hoverCO");
   });
@@ -11098,8 +11098,93 @@ $(window).scroll(function () {
   } else {
     $('#mobileThumb').removeClass('hoverCO');
   }
+}); // Wrap every letter in a span
+
+var textWrapper = document.querySelector('.hello');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+var animationHelloTwo = anime.timeline().add({
+  targets: '.hello .letter',
+  translateY: [0, 10],
+  opacity: [1, 0],
+  easing: "easeOutExpo",
+  duration: 200,
+  delay: function delay(el, i) {
+    return 30 * i;
+  }
+}).add({
+  targets: '.hello .letter',
+  translateY: [-10, 0],
+  opacity: [0, 1],
+  easing: "easeOutExpo",
+  duration: 500,
+  delay: function delay(el, i) {
+    return 30 * i;
+  }
 });
-},{"jquery":"node_modules/jquery/dist/jquery.js"}],"../../../../../usr/local/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+var animationHello = anime({
+  targets: '.hello .letter',
+  opacity: [0, 1],
+  translateY: [-10, 0],
+  easing: "easeOutExpo",
+  duration: 1000,
+  delay: function delay(el, i) {
+    return 30 * i;
+  }
+});
+var animationMoreHello = anime({
+  targets: '.moreHello',
+  opacity: [0, 1],
+  easing: "easeOutExpo",
+  delay: 500,
+  duration: 2000
+}); //...mobile copy. ik its fucking stupid
+// Wrap every letter in a span
+
+var textWrapperM = document.querySelector('.hello2');
+textWrapperM.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+var animationHelloTwoM = anime.timeline().add({
+  targets: '.hello2 .letter',
+  translateY: [0, 10],
+  opacity: [1, 0],
+  easing: "easeOutExpo",
+  duration: 200,
+  delay: function delay(el, i) {
+    return 30 * i;
+  }
+}).add({
+  targets: '.hello2 .letter',
+  translateY: [-10, 0],
+  opacity: [0, 1],
+  easing: "easeOutExpo",
+  duration: 500,
+  delay: function delay(el, i) {
+    return 30 * i;
+  }
+});
+var animationHelloM = anime({
+  targets: '.hello2 .letter',
+  opacity: [0, 1],
+  translateY: [-10, 0],
+  easing: "easeOutExpo",
+  duration: 1000,
+  delay: function delay(el, i) {
+    return 30 * i;
+  }
+});
+var animationMoreHelloM = anime({
+  targets: '.moreHello2',
+  opacity: [0, 1],
+  easing: "easeOutExpo",
+  delay: 500,
+  duration: 2000
+});
+document.querySelector('#memoji').onclick = animationHelloTwo.restart;
+document.querySelector('#memoji2').onclick = animationHelloTwoM.restart;
+animationHello();
+animationMoreHello();
+animationHelloM();
+animationMoreHelloM();
+},{"jquery":"node_modules/jquery/dist/jquery.js"}],"../../Users/Surface/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -11127,7 +11212,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51103" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54609" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -11303,5 +11388,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../usr/local/lib/node_modules/parcel/src/builtins/hmr-runtime.js","js/index.js"], null)
+},{}]},{},["../../Users/Surface/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/index.js"], null)
 //# sourceMappingURL=/js.00a46daa.js.map

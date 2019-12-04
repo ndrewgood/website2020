@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
     <link rel="stylesheet" href="./style/style.scss">
     <link rel="stylesheet" href="./style/border.scss">
     <link rel="stylesheet" href="./style/mobile.scss">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
 
     <title>Andrews Test</title>
 </head>
@@ -54,8 +57,12 @@
   <main id="main">
     <section class="container mobileContainer">
       <div id="mobileContent" class="mobileContent border-bottom">
-          <div id="mobileThumb"></div>
-          <h1 id="mobileContentText">This is a placeholder for the fun stuff.</h1>
+        <div class="mContainer">
+        <div id="memoji2" class="memojiFace"></div>
+        <h1 class="hello2"><span>H</span><span>e</span><span>l</span><span>l</span><span>o</span><span>,</span> <span>m</span><span>y</span> <span>n</span><span>a</span><span>m</span><span>e</span> <span>i</span><span>s</span> <span>A</span><span>n</span><span>d</span><span>r</span><span>e</span><span>w</span></h1>
+        <h2 class="moreHello2">I’m a designer and developer studying User Experience Design at SCAD. </h2>  
+        </div>
+        <div id="mobileThumb"><div></div></div>
       </div>
       <div class="sideCat border-right">
         <div class="cat border-bottom">
@@ -91,10 +98,10 @@
     </section>
     <section class="container content border-left">
       <div class="contentContainer">
-        <div class="memojiFace"></div>
-        <h1 id="hello">Hello, my name is Andrew 👋 </h1>
-        <h2 id="moreHello">I’m a designer and developer studying User Experience Design at SCAD. </h2>
-        <div id="hoverImage"></div>
+        <div id="memoji" class="memojiFace"></div>
+        <h1 class="hello"><span>H</span><span>e</span><span>l</span><span>l</span><span>o</span><span>,</span> <span>m</span><span>y</span> <span>n</span><span>a</span><span>m</span><span>e</span> <span>i</span><span>s</span> <span>A</span><span>n</span><span>d</span><span>r</span><span>e</span><span>w</span> </h1>
+        <h2 class="moreHello">I’m a designer and developer studying User Experience Design at SCAD. </h2>
+        <div id="hoverImage"><div></div></div>
       </div>
     </section>
   </main>

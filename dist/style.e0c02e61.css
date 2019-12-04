@@ -3,7 +3,7 @@
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow: hidden;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -170,15 +170,43 @@ main {
   font-family: gitan-latin, sans-serif;
   font-weight: 500 !important;
   font-style: italic;
-  font-size: 35px;
+  font-size: 45px;
+  line-height: 1.4em;
   margin-bottom: 0px;
+  text-align: center;
+  width: 100%;
+}
+@media screen and (max-width: 1300px) {
+  .contentContainer h1 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .contentContainer h1 {
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 980px) {
+  .contentContainer h1 {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 880px) {
+  .contentContainer h1 {
+    font-size: 45px;
+  }
 }
 
 .contentContainer h2 {
-  margin-top: 10px;
+  margin-top: 20px;
   font-family: gitan-latin, sans-serif;
   font-weight: 500 !important;
   font-style: normal;
+}
+@media screen and (max-width: 1120px) {
+  .contentContainer h2 {
+    font-size: 20px;
+  }
 }
 
 .memojiFace {
@@ -188,7 +216,25 @@ main {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  margin-bottom: 100px;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 800px) {
+  .memojiFace {
+    width: 30%;
+    height: 100px;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .memojiFace {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .memojiFace {
+    height: 70px;
+  }
 }
 
 .memojiFace:hover {
@@ -210,19 +256,65 @@ main {
 }
 
 .hoverPT {
-  background-color: blue !important;
+  background-color: #f3ffe2;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.hoverPT > div {
+  background-image: url(/pt.01a4f08c.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 90%;
+  width: 90%;
+  background-position: center;
+  margin: auto;
 }
 
 .hoverLW {
-  background-color: red !important;
+  background-color: #cfdced !important;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.hoverLW > div {
+  background-image: url(/lw.10d2c174.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 90%;
+  width: 90%;
+  background-position: center;
+  margin: auto;
 }
 
 .hoverFLUX {
-  background-color: yellow !important;
+  background-color: #b2beea !important;
+}
+
+.hoverFLUX > div {
+  background-image: url(/flux.7c36740a.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 90%;
+  width: 90%;
+  background-position: center;
+  margin: auto;
 }
 
 .hoverCO {
-  background-color: green !important;
+  background-color: #ebcb90 !important;
+}
+
+.hoverCO > div {
+  background-image: url(/co.9c106da8.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 90%;
+  width: 90%;
+  background-position: center;
+  margin: auto;
 }
 
 .hoverCATB {
@@ -263,16 +355,103 @@ main {
   border-top: solid black 2px;
 }
 
-.mobileThumb {
-  width: 100vw;
-  height: 50px;
+@media screen and (min-width: 2000px) {
+  .contentContainer h1 {
+    font-size: 60px;
+  }
+
+  .contentContainer h2 {
+    margin-top: 20px;
+    font-size: 40px;
+  }
+
+  .nav {
+    height: 200px;
+  }
+
+  .navBlock p {
+    font-size: 30px;
+  }
+
+  section {
+    height: calc(100vh - 200px);
+  }
+
+  .sideCat {
+    width: 200px;
+  }
+
+  .hoverImage {
+    height: calc(100vh - 200px);
+  }
+
+  .playList {
+    height: calc(100vh - 200px);
+  }
+
+  .workItem {
+    font-size: 32px;
+  }
+
+  .cat p {
+    font-size: 25px;
+  }
+}
+#noItalicHand {
+  font-style: normal;
 }
 
-.hoverPT, .hoverLW, .hoverFLUX, .hoverCO {
-  width: 100vw;
-  height: 100%;
-  position: absolute;
-  z-index: 10;
+.hello, .hello span {
+  display: inline-block;
+}
+
+.hello2, .hello2 span {
+  display: inline-block;
+}
+
+.mContainer {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.mContainer h1 {
+  font-family: gitan-latin, sans-serif;
+  font-weight: 500 !important;
+  font-style: italic;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+@media screen and (max-width: 400px) {
+  .mContainer h1 {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .mContainer h1 {
+    font-size: 20px;
+  }
+}
+
+.mContainer h2 {
+  font-family: gitan-latin, sans-serif;
+  font-weight: 500 !important;
+  font-style: normal;
+  font-size: 17px;
+  width: 70vw;
+  margin-top: 10px;
+}
+@media screen and (max-width: 400px) {
+  .mContainer h2 {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .mContainer h2 {
+    font-size: 12px;
+  }
 }
 
 /*# sourceMappingURL=/style.e0c02e61.css.map */

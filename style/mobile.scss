@@ -26,7 +26,7 @@
 
 .menuContainer {
     display: none;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     position: absolute;
     background-color: white;
@@ -41,7 +41,7 @@
 }
 
 .mNavTop {
-    height: 25vh;
+    height: 20%;
     width: 100vw;
     display: inline-flex;
 }
@@ -57,12 +57,16 @@
 }
 
 .mNavBlock {
-    height: 25vh;
+    height: 25%;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
+}
+
+.mNavList {
+    height: 75%;
 }
 
 .mNavBlock {
@@ -75,6 +79,10 @@
 
 
 @media only screen and (max-width: 800px) {
+    body {
+        overflow: auto;
+    }
+
     nav {
         display: none !important;
         position: fixed;
@@ -138,6 +146,13 @@
         margin-top: 100px;
         margin-left: 0px !important;
         width: 100vw !important;
+    }
+
+    .hoverPT, .hoverLW, .hoverFLUX, .hoverCO {
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        z-index: 10;
     }
 
 }

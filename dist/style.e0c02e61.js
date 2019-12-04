@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../../../../usr/local/lib/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
+})({"../../Users/Surface/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -149,7 +149,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"../../../../../usr/local/lib/node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"../../Users/Surface/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -184,12 +184,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../../../usr/local/lib/node_modules/parcel/src/builtins/bundle-url.js"}],"style/style.scss":[function(require,module,exports) {
+},{"./bundle-url":"../../Users/Surface/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"style/style.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../assets/img/memoji.png":[["memoji.27e1c382.png","assets/img/memoji.png"],"assets/img/memoji.png"],"./../assets/img/memoji2.png":[["memoji2.e3836755.png","assets/img/memoji2.png"],"assets/img/memoji2.png"],"./../assets/img/cursorHeart.png":[["cursorHeart.9957c8b2.png","assets/img/cursorHeart.png"],"assets/img/cursorHeart.png"],"_css_loader":"../../../../../usr/local/lib/node_modules/parcel/src/builtins/css-loader.js"}],"../../../../../usr/local/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./..\\assets\\img\\memoji.png":[["memoji.27e1c382.png","assets/img/memoji.png"],"assets/img/memoji.png"],"./..\\assets\\img\\memoji2.png":[["memoji2.e3836755.png","assets/img/memoji2.png"],"assets/img/memoji2.png"],"./..\\assets\\img\\cursorHeart.png":[["cursorHeart.9957c8b2.png","assets/img/cursorHeart.png"],"assets/img/cursorHeart.png"],"./..\\assets\\img\\pt.png":[["pt.01a4f08c.png","assets/img/pt.png"],"assets/img/pt.png"],"./..\\assets\\img\\lw.png":[["lw.10d2c174.png","assets/img/lw.png"],"assets/img/lw.png"],"./..\\assets\\img\\flux.png":[["flux.7c36740a.png","assets/img/flux.png"],"assets/img/flux.png"],"./..\\assets\\img\\co.png":[["co.9c106da8.png","assets/img/co.png"],"assets/img/co.png"],"_css_loader":"../../Users/Surface/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../Users/Surface/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51103" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54609" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -393,5 +393,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../usr/local/lib/node_modules/parcel/src/builtins/hmr-runtime.js"], null)
+},{}]},{},["../../Users/Surface/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
 //# sourceMappingURL=/style.e0c02e61.js.map
