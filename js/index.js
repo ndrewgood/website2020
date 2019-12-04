@@ -90,10 +90,10 @@ $(function() {
 //hover Chaos and the Butterfly
 $(function() {
   $('#catb').hover(function() {
-    $('#playDesc').addClass("noDisplay");
+    $('.playDesc').addClass("noDisplay");
     $('#hoverImage').addClass("hoverImage hoverCATB");
   }, function() {
-    $('#playDesc').removeClass("noDisplay");
+    $('.playDesc').removeClass("noDisplay");
     $('#hoverImage').removeClass("hoverImage hoverCATB");
   });
 });
@@ -101,7 +101,7 @@ $(function() {
 //hover Best Albums of 2019
 $(function() {
   $('#ba19').hover(function() {
-    $('#playDesc').addClass("noDisplay");
+    $('.playDesc').addClass("noDisplay");
     $('#hoverImage').addClass("hoverImage hoverBA19");
   }, function() {
     $('#playDesc').removeClass("noDisplay");
@@ -112,10 +112,10 @@ $(function() {
 //hover Code Art
 $(function() {
   $('#code').hover(function() {
-    $('#playDesc').addClass("noDisplay");
+    $('.playDesc').addClass("noDisplay");
     $('#hoverImage').addClass("hoverImage hoverCODE");
   }, function() {
-    $('#playDesc').removeClass("noDisplay");
+    $('.playDesc').removeClass("noDisplay");
     $('#hoverImage').removeClass("hoverImage hoverCODE");
   });
 });
@@ -123,63 +123,16 @@ $(function() {
 //hover Drumline
 $(function() {
   $('#drum').hover(function() {
-    $('#playDesc').addClass("noDisplay");
+    $('.playDesc').addClass("noDisplay");
     $('#hoverImage').addClass("hoverImage hoverDRUM");
   }, function() {
-    $('#playDesc').removeClass("noDisplay");
+    $('.playDesc').removeClass("noDisplay");
     $('#hoverImage').removeClass("hoverImage hoverDRUM");
   });
 });
 
 
 
-$(window).scroll(function() {
-  var hT = $('#lw').offset().top,
-      hH = $('#lw').outerHeight(),
-      wH = $(window).height(),
-      wS = $(this).scrollTop();
-  if (wS > (hT+hH-wH) && (hT > wS) && (wS+wH > hT+hH)){
-     $('#mobileThumb').addClass('hoverLW');
-  } else {
-    $('#mobileThumb').removeClass('hoverLW');
-  }
-});
-
-$(window).scroll(function() {
-  var hT = $('#pt').offset().top,
-      hH = $('#pt').outerHeight(),
-      wH = $(window).height(),
-      wS = $(this).scrollTop();
-  if (wS > (hT+hH-wH) && (hT > wS) && (wS+wH > hT+hH)){
-     $('#mobileThumb').addClass('hoverPT');
-  } else {
-    $('#mobileThumb').removeClass('hoverPT');
-  }
-});
-
-$(window).scroll(function() {
-  var hT = $('#flux').offset().top,
-      hH = $('#flux').outerHeight(),
-      wH = $(window).height(),
-      wS = $(this).scrollTop();
-  if (wS > (hT+hH-wH) && (hT > wS) && (wS+wH > hT+hH)){
-     $('#mobileThumb').addClass('hoverFLUX');
-  } else {
-     $('#mobileThumb').removeClass('hoverFLUX');
-  }
-});
-
-$(window).scroll(function() {
-  var hT = $('#co').offset().top,
-      hH = $('#co').outerHeight(),
-      wH = $(window).height(),
-      wS = $(this).scrollTop();
-  if (wS > (hT+hH-wH) && (hT > wS) && (wS+wH > hT+hH)){
-         $('#mobileThumb').addClass('hoverCO');
-  } else {
-        $('#mobileThumb').removeClass('hoverCO');
-  }
-});
 
 // Wrap every letter in a span
 var textWrapper = document.querySelector('.hello');
@@ -216,6 +169,13 @@ var animationMoreHello = anime({
   opacity: [0,1],
   easing: "easeOutExpo",
   delay: 500,
+  duration: 2000
+});
+
+var animationPlay = anime({
+  targets: '.playText',
+  opacity: [0,1],
+  easing: "easeOutExpo",
   duration: 2000
 });
 
@@ -258,9 +218,18 @@ var animationMoreHelloM = anime({
   duration: 2000
 });
 
+var animationPlayM = anime({
+  targets: '.playText2',
+  opacity: [0,1],
+  easing: "easeOutExpo",
+  duration: 2000
+});
+
 document.querySelector('#memoji').onclick = animationHelloTwo.restart;
 document.querySelector('#memoji2').onclick = animationHelloTwoM.restart;
 
+animationPlay();
+animationPlayM();
 animationHello();
 animationMoreHello();
 animationHelloM();

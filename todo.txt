@@ -1,7 +1,7 @@
-0). Make images load quicker
-1). animate text on play page
-2). make thumbnails for play articles
-3). make good favicon
-4). get pics and description and resume for about page
-5). Put content in for work articles
-6). Put content in for play articles
+[ X ] 0). Make images load quicker
+[ ? ] 1). animate text on play page
+[ X ] 2). make thumbnails for play articles
+[   ] 3). make good favicon
+[   ] 4). get pics and description and resume for about page
+[   ] 5). Put content in for work articles
+[   ] 6). Put content in for play articles

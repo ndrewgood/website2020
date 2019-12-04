@@ -11014,17 +11014,17 @@ $(function () {
 
 $(function () {
   $('#catb').hover(function () {
-    $('#playDesc').addClass("noDisplay");
+    $('.playDesc').addClass("noDisplay");
     $('#hoverImage').addClass("hoverImage hoverCATB");
   }, function () {
-    $('#playDesc').removeClass("noDisplay");
+    $('.playDesc').removeClass("noDisplay");
     $('#hoverImage').removeClass("hoverImage hoverCATB");
   });
 }); //hover Best Albums of 2019
 
 $(function () {
   $('#ba19').hover(function () {
-    $('#playDesc').addClass("noDisplay");
+    $('.playDesc').addClass("noDisplay");
     $('#hoverImage').addClass("hoverImage hoverBA19");
   }, function () {
     $('#playDesc').removeClass("noDisplay");
@@ -11034,70 +11034,22 @@ $(function () {
 
 $(function () {
   $('#code').hover(function () {
-    $('#playDesc').addClass("noDisplay");
+    $('.playDesc').addClass("noDisplay");
     $('#hoverImage').addClass("hoverImage hoverCODE");
   }, function () {
-    $('#playDesc').removeClass("noDisplay");
+    $('.playDesc').removeClass("noDisplay");
     $('#hoverImage').removeClass("hoverImage hoverCODE");
   });
 }); //hover Drumline
 
 $(function () {
   $('#drum').hover(function () {
-    $('#playDesc').addClass("noDisplay");
+    $('.playDesc').addClass("noDisplay");
     $('#hoverImage').addClass("hoverImage hoverDRUM");
   }, function () {
-    $('#playDesc').removeClass("noDisplay");
+    $('.playDesc').removeClass("noDisplay");
     $('#hoverImage').removeClass("hoverImage hoverDRUM");
   });
-});
-$(window).scroll(function () {
-  var hT = $('#lw').offset().top,
-      hH = $('#lw').outerHeight(),
-      wH = $(window).height(),
-      wS = $(this).scrollTop();
-
-  if (wS > hT + hH - wH && hT > wS && wS + wH > hT + hH) {
-    $('#mobileThumb').addClass('hoverLW');
-  } else {
-    $('#mobileThumb').removeClass('hoverLW');
-  }
-});
-$(window).scroll(function () {
-  var hT = $('#pt').offset().top,
-      hH = $('#pt').outerHeight(),
-      wH = $(window).height(),
-      wS = $(this).scrollTop();
-
-  if (wS > hT + hH - wH && hT > wS && wS + wH > hT + hH) {
-    $('#mobileThumb').addClass('hoverPT');
-  } else {
-    $('#mobileThumb').removeClass('hoverPT');
-  }
-});
-$(window).scroll(function () {
-  var hT = $('#flux').offset().top,
-      hH = $('#flux').outerHeight(),
-      wH = $(window).height(),
-      wS = $(this).scrollTop();
-
-  if (wS > hT + hH - wH && hT > wS && wS + wH > hT + hH) {
-    $('#mobileThumb').addClass('hoverFLUX');
-  } else {
-    $('#mobileThumb').removeClass('hoverFLUX');
-  }
-});
-$(window).scroll(function () {
-  var hT = $('#co').offset().top,
-      hH = $('#co').outerHeight(),
-      wH = $(window).height(),
-      wS = $(this).scrollTop();
-
-  if (wS > hT + hH - wH && hT > wS && wS + wH > hT + hH) {
-    $('#mobileThumb').addClass('hoverCO');
-  } else {
-    $('#mobileThumb').removeClass('hoverCO');
-  }
 }); // Wrap every letter in a span
 
 var textWrapper = document.querySelector('.hello');
@@ -11136,6 +11088,12 @@ var animationMoreHello = anime({
   opacity: [0, 1],
   easing: "easeOutExpo",
   delay: 500,
+  duration: 2000
+});
+var animationPlay = anime({
+  targets: '.playText',
+  opacity: [0, 1],
+  easing: "easeOutExpo",
   duration: 2000
 }); //...mobile copy. ik its fucking stupid
 // Wrap every letter in a span
@@ -11178,8 +11136,16 @@ var animationMoreHelloM = anime({
   delay: 500,
   duration: 2000
 });
+var animationPlayM = anime({
+  targets: '.playText2',
+  opacity: [0, 1],
+  easing: "easeOutExpo",
+  duration: 2000
+});
 document.querySelector('#memoji').onclick = animationHelloTwo.restart;
 document.querySelector('#memoji2').onclick = animationHelloTwoM.restart;
+animationPlay();
+animationPlayM();
 animationHello();
 animationMoreHello();
 animationHelloM();
@@ -11212,7 +11178,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54609" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65021" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

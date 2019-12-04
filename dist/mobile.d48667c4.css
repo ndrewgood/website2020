@@ -17,9 +17,9 @@
   height: 300px;
   width: 100vw;
   position: fixed;
-  background-color: white;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 }
 
 .menuContainer {
@@ -113,6 +113,7 @@
   .mobileCat {
     display: flex;
     height: 150px;
+    z-index: 5;
   }
 
   .cat p {
@@ -143,7 +144,7 @@
     width: 100vw !important;
   }
 
-  .hoverPT, .hoverLW, .hoverFLUX, .hoverCO {
+  .hoverPT, .hoverLW, .hoverFLUX, .hoverCO, .hoverCATB, .hoverBA19, .hoverCODE, .hoverDRUM {
     width: 100vw;
     height: 100%;
     position: absolute;

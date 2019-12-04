@@ -60,6 +60,7 @@ main {
   display: flex;
   flex-direction: column;
   font-style: italic;
+  z-index: 10;
 }
 
 .cat {
@@ -68,6 +69,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #e8e0cc;
+  z-index: -101;
 }
 
 .cat p {
@@ -87,7 +90,8 @@ main {
   font-family: gitan-latin, sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: 24px;
+  font-size: 30px;
+  background-color: #e8e0cc;
 }
 
 .workItem {
@@ -109,12 +113,17 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #e8e0cc;
 }
 
 .playList {
   width: 50vw;
   display: grid;
   height: calc(100vh - 100px);
+}
+
+.playList > a {
+  background-color: #d4e8cc;
 }
 
 .aboutItem {
@@ -138,6 +147,7 @@ main {
   text-align: center;
   height: 100%;
   color: black;
+  background-color: #cce2e8;
 }
 
 .socialItem p {
@@ -160,6 +170,10 @@ main {
 
 .aboutList {
   margin-top: 0px !important;
+}
+
+.aboutList > a {
+  background-color: #cce2e8;
 }
 
 .contentContainer {
@@ -244,6 +258,7 @@ main {
 
 .noDisplay {
   display: none !important;
+  background-color: none;
 }
 
 .hoverImage {
@@ -318,19 +333,59 @@ main {
 }
 
 .hoverCATB {
-  background-color: blue;
+  background-color: #eed4b5 !important;
+}
+
+.hoverCATB > div {
+  background-image: url(/catb.0fc47dd4.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 90%;
+  width: 90%;
+  background-position: center;
+  margin: auto;
 }
 
 .hoverBA19 {
-  background-color: red;
+  background-color: #e4ddeb !important;
+}
+
+.hoverBA19 > div {
+  background-image: url(/ba19.1437299f.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 90%;
+  width: 90%;
+  background-position: center;
+  margin: auto;
 }
 
 .hoverCODE {
-  background-color: yellow;
+  background-color: #b3e2cb !important;
+}
+
+.hoverCODE > div {
+  background-image: url(/code.cb2a02a2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 90%;
+  width: 90%;
+  background-position: center;
+  margin: auto;
 }
 
 .hoverDRUM {
-  background-color: green;
+  background-color: #f1cfc6 !important;
+}
+
+.hoverDRUM > div {
+  background-image: url(/drum.58775289.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 90%;
+  width: 90%;
+  background-position: center;
+  margin: auto;
 }
 
 .hoverEND {
@@ -452,6 +507,37 @@ main {
   .mContainer h2 {
     font-size: 12px;
   }
+}
+
+.playEnd {
+  background-color: #d4e8cc;
+}
+
+.playSection {
+  background-color: #d4e8cc;
+}
+
+.aboutSection {
+  background-color: #cce2e8;
+}
+
+.aboutSection > div {
+  background-color: #cce2e8;
+}
+
+.workSection > div {
+  background-color: #e8e0cc;
+}
+
+.playText2 {
+  font-family: gitan-latin, sans-serif;
+  font-weight: 500 !important;
+  font-style: italic;
+  font-size: 25px;
+  line-height: 1.4em;
+  margin-bottom: 0px;
+  text-align: center;
+  width: 90%;
 }
 
 /*# sourceMappingURL=/style.e0c02e61.css.map */
