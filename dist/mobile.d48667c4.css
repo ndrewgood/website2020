@@ -51,6 +51,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  font-size: 20px;
 }
 
 .mNavBlock {
@@ -60,6 +61,13 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
+}
+
+.mNavBlock p {
+  font-family: gitan-latin, sans-serif;
+  font-weight: 500 !important;
+  font-style: normal;
+  font-size: 30px;
 }
 
 .mNavList {
@@ -76,7 +84,7 @@
 
 @media only screen and (max-width: 800px) {
   body {
-    overflow: auto;
+    overflow-y: auto;
   }
 
   nav {
@@ -130,6 +138,10 @@
     margin-top: 100px;
   }
 
+  .aboutSection {
+    height: auto;
+  }
+
   .aboutItem {
     height: 200px;
   }
@@ -149,6 +161,10 @@
     height: 100%;
     position: absolute;
     z-index: 10;
+  }
+
+  .email {
+    border-top: 2px solid black;
   }
 }
 

@@ -1,5 +1,15 @@
 @import url("https://use.typekit.net/qrb3wez.css");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&display=swap");
+::selection {
+  background: black;
+  color: white;
+}
+
+::-moz-selection {
+  background: black;
+  color: white;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -160,8 +170,22 @@ main {
 
 .aboutContent {
   position: relative !important;
-  width: 100vw;
-  height: 500px !important;
+  height: auto !important;
+  display: inline !important;
+}
+
+.aboutContent p {
+  width: 80vw !important;
+  margin: auto;
+  font-size: 20px;
+}
+
+.aboutContent div {
+  width: 90vw !important;
+  height: 300px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 
 .aboutContainer {
@@ -538,6 +562,66 @@ main {
   margin-bottom: 0px;
   text-align: center;
   width: 90%;
+}
+
+.aboutPic1 {
+  background-image: url(/about1.0ebc5cd6.JPG);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 400px;
+}
+
+.aboutPara {
+  width: 100%;
+  font-size: 22px;
+  line-height: 1.5em;
+}
+
+.aboutPara a {
+  text-decoration: underline;
+  color: black;
+}
+
+.aboutPara a:hover {
+  font-weight: 600;
+}
+
+.aboutPara a::selection {
+  color: grey;
+}
+
+.aboutPara a::-moz-selection {
+  color: grey;
+}
+
+.aboutSectionRight {
+  overflow: auto;
+  align-items: flex-start;
+}
+
+.aboutPic2 {
+  background-image: url(/about2.c22813f0.JPG);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 400px;
+}
+
+@media screen and (min-width: 2000px) {
+  .aboutPara {
+    width: 100%;
+    font-size: 30px;
+    line-height: 1.5em;
+  }
+
+  .aboutPic1 {
+    height: 600px;
+  }
+
+  .aboutPic2 {
+    height: 600px;
+  }
 }
 
 /*# sourceMappingURL=/style.e0c02e61.css.map */

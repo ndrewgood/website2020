@@ -11050,6 +11050,14 @@ $(function () {
     $('.playDesc').removeClass("noDisplay");
     $('#hoverImage').removeClass("hoverImage hoverDRUM");
   });
+});
+$(function () {
+  $(".sideBarUp").on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: 0
+    }, '300');
+  });
 }); // Wrap every letter in a span
 
 var textWrapper = document.querySelector('.hello');
@@ -11178,7 +11186,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65021" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57574" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

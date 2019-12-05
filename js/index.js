@@ -132,6 +132,13 @@ $(function() {
 });
 
 
+$(function() {
+  $(".sideBarUp").on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop:0}, '300');
+  });
+});
+
 
 
 // Wrap every letter in a span
