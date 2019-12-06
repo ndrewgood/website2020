@@ -7,6 +7,12 @@ body {
     width: 100px;
     height: calc(100vh - 100px);
     position: fixed;
+    @media screen and (min-width: 2000px) {
+        margin-top: 200px;
+        height: calc(100vh - 200px);
+        width: 200px;
+        font-size: 30px;
+    }
 }
 
 .articleContent {
@@ -17,6 +23,10 @@ body {
     font-size: 30px;
     min-height: calc(100vh - 100px);
     padding: 3vw;
+    @media screen and (min-width: 2000px) {
+        width: calc(100vw - 200px);
+        margin-left: 200px;
+    }
 }
 
 .articleNav {
@@ -35,6 +45,9 @@ body {
     text-decoration: none;
     color: black;
     cursor: pointer;
+    @media screen and (min-width: 2000px) {
+        height: 200px;
+    }
 }
 
 .sideBarTitle {
@@ -42,12 +55,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    @media screen and (min-width: 2000px) {
+        height: calc(100vh - 800px);
+    }
 }
 
 .sideBarTitle p {
     margin: 0;
     padding: 0;
     transform: rotate(-90deg);
+    text-align: center;
 }
 
 .splitGrid {
@@ -67,15 +84,33 @@ body {
     font-style: italic;
     font-size: 60px;
     margin: 0;
+    margin-bottom: -10px;
+    @media screen and (min-width: 2000px) {
+        font-size: 80px;
+    }
+    @media screen and (max-width: 1000px) {
+        font-size: 50px;
+    }
 }
 
 .articleContent h2 {
     font-family: gitan-latin, sans-serif;
     font-weight: 500 !important;
     font-style: normal;
-    font-size: 35px;
+    font-size: 30px;
     margin: 0;
-
+    @media screen and (min-width: 2000px) {
+        font-size: 50px;
+    }
+    @media screen and (max-width: 1000px) {
+        font-size: 25px;
+        width: 80%;
+        margin: auto;
+        line-height: 1.5em;
+    }
+    @media screen and (max-width: 500px) {
+        font-size: 20px;
+    }
 }
 
 .articleContent h3 {
@@ -85,20 +120,54 @@ body {
     font-size: 25px;
     margin: auto;
     margin-bottom: 10px;
-    width: 60%;
+    width: 50%;
     text-align: left;
-
+    @media screen and (min-width: 2000px) {
+        font-size: 35px;
+    }
+    @media screen and (max-width: 1300px) {
+        width: 60%;
+    }
+    @media screen and (max-width: 1000px) {
+        width: 70%;
+    }
+    @media screen and (max-width: 800px) {
+        width: 85%;
+    }
+    @media screen and (max-width: 500px) {
+        width: 95%;
+        font-size: 23px;
+    }
 }
 
 .articleContent p {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 20px;
+    font-size: 18px;
     text-align: left;
     margin: auto;
+    line-height: 1.6em;
     margin-bottom: 10px;
-    width: 60%;
+    margin-top: 10px;
+    width: 50%;
+    @media screen and (min-width: 2000px) {
+        font-size: 28px;
+    }
+    @media screen and (max-width: 1300px) {
+        width: 60%;
+        font-size: 17px;
+    }
+    @media screen and (max-width: 1000px) {
+        width: 70%;
+    }
+    @media screen and (max-width: 800px) {
+        width: 85%;
+    }
+    @media screen and (max-width: 500px) {
+        width: 95%;
+        font-size: 16px;
+    }
 }
 
 .centerP {
@@ -142,24 +211,28 @@ body {
 .articleContent a {
     text-decoration: underline;
     color: black;
-    font-size: 20px;
 }
 
 .articleContent a:hover {
-    font-weight: 600;
+    background-color: black;
+    color: white;
 }
 
 .button{
-border: 2px solid black;
-padding: 20px;
-text-decoration: none !important;
-font-size: 28px !important;
-font-weight: 700;
-display: inline-block;
+    border: 2px solid black;
+    padding: 20px;
+    text-decoration: none !important;
+    font-size: 28px !important;
+    font-weight: 700;
+    display: inline-block;
+    @media screen and (min-width: 2000px) {
+        font-size: 45px !important;
+        padding: 40px;
+    }
 }
 
 .button:hover {
-    border: 2px solid white;
+    border: 2px solid bl;
     background-color: black;
     color:white;
 }
@@ -168,6 +241,115 @@ display: inline-block;
     font-family: gitan-latin, sans-serif !important;
     font-weight: 500 !important;
     font-style: italic !important;
-    font-size: 30px !important;
+    font-size: 25px !important;
     opacity: .6;
+    @media screen and (min-width: 2000px) {
+        font-size: 35px !important;
+    }
+    @media screen and (max-width: 500px) {
+        font-size: 20px !important;
+    }
+}
+
+.articleContent ul {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    text-align: left;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 50%;
+    @media screen and (min-width: 2000px) {
+        font-size: 28px;
+    }
+    @media screen and (max-width: 1300px) {
+        width: 60%;
+        font-size: 17px;
+    }
+    @media screen and (max-width: 1000px) {
+        width: 70%;
+    }
+    @media screen and (max-width: 800px) {
+        width: 85%;
+    }
+    @media screen and (max-width: 500px) {
+        width: 95%;
+        font-size: 16px;
+    }
+}
+
+.articleContent li {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    @media screen and (max-width: 1000px) {
+        width: 80%;
+    }
+}
+
+.break {
+    width: 100%;
+    height: 100px;
+    @media screen and (max-width: 1300px) {
+        height: 80px;
+    }
+    @media screen and (max-width: 800px) {
+        height: 60px;
+    }
+    @media screen and (max-width: 500px) {
+        height: 40px;
+    }
+}
+
+.halfBreak {
+    width: 100%;
+    height: 50px;
+    @media screen and (max-width: 1300px) {
+        height: 40px;
+    }
+    @media screen and (max-width: 800px) {
+        height: 30px;
+    }
+    @media screen and (max-width: 500px) {
+        height: 20px;
+    }
+}
+
+.caption {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400 !important;
+    font-style: italic !important;
+    font-size: 14px !important;
+    opacity: .6;
+    text-align: center !important;
+    @media screen and (min-width: 2000px) {
+        font-size: 20px !important;
+    }
+}
+
+.ph500 {
+    height: 500px;
+    @media screen and (min-width: 2000px) {
+        height: 700px;
+    }
+    @media screen and (max-width: 1300px) {
+        height: 450px;
+    }
+    @media screen and (max-width: 1000px) {
+        height: 300px;
+    }
+}
+
+.ph600 {
+    height: 600px;
+    @media screen and (min-width: 2000px) {
+        height: 800px;
+    }
+    @media screen and (max-width: 1300px) {
+        height: 550px;
+    }
+    @media screen and (max-width: 1000px) {
+        height: 400px;
+    }
 }
