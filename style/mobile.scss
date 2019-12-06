@@ -85,6 +85,11 @@
 .theEnd {
     height: 500px !important;
 }
+@media only screen and (min-width: 800px) {
+    .aboutContent{
+        display:none !important;
+    }
+}
 
 
 @media only screen and (max-width: 800px) {

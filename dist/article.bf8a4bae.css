@@ -14,7 +14,9 @@ body {
   margin-left: 100px;
   width: calc(100vw - 100px);
   text-align: center;
-  font-size: 60px;
+  font-size: 30px;
+  min-height: calc(100vh - 100px);
+  padding: 3vw;
 }
 
 .articleNav {
@@ -46,6 +48,123 @@ body {
   margin: 0;
   padding: 0;
   transform: rotate(-90deg);
+}
+
+.splitGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 60%;
+  margin: auto;
+}
+
+.articleContent h1 {
+  font-family: gitan-latin, sans-serif;
+  font-weight: 500 !important;
+  font-style: italic;
+  font-size: 60px;
+  margin: 0;
+}
+
+.articleContent h2 {
+  font-family: gitan-latin, sans-serif;
+  font-weight: 500 !important;
+  font-style: normal;
+  font-size: 35px;
+  margin: 0;
+}
+
+.articleContent h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600 !important;
+  font-style: normal;
+  font-size: 25px;
+  margin: auto;
+  margin-bottom: 10px;
+  width: 60%;
+  text-align: left;
+}
+
+.articleContent p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  text-align: left;
+  margin: auto;
+  margin-bottom: 10px;
+  width: 60%;
+}
+
+.centerP {
+  text-align: center !important;
+}
+
+.splitGrid p {
+  margin: auto;
+}
+
+.splitImage {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: auto;
+  width: 100%;
+}
+
+.halfWidthImage {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.fullWidthImage {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.articleContent a {
+  text-decoration: underline;
+  color: black;
+  font-size: 20px;
+}
+
+.articleContent a:hover {
+  font-weight: 600;
+}
+
+.button {
+  border: 2px solid black;
+  padding: 20px;
+  text-decoration: none !important;
+  font-size: 28px !important;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.button:hover {
+  border: 2px solid white;
+  background-color: black;
+  color: white;
+}
+
+.quote {
+  font-family: gitan-latin, sans-serif !important;
+  font-weight: 500 !important;
+  font-style: italic !important;
+  font-size: 30px !important;
+  opacity: 0.6;
 }
 
 /*# sourceMappingURL=/article.bf8a4bae.css.map */
