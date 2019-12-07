@@ -167,7 +167,7 @@ body {
   }
 }
 
-.articleContent p {
+.articleContent p, li {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -180,28 +180,28 @@ body {
   width: 50%;
 }
 @media screen and (min-width: 2000px) {
-  .articleContent p {
+  .articleContent p, li {
     font-size: 28px;
   }
 }
 @media screen and (max-width: 1300px) {
-  .articleContent p {
+  .articleContent p, li {
     width: 60%;
     font-size: 17px;
   }
 }
 @media screen and (max-width: 1000px) {
-  .articleContent p {
+  .articleContent p, li {
     width: 70%;
   }
 }
 @media screen and (max-width: 800px) {
-  .articleContent p {
+  .articleContent p, li {
     width: 85%;
   }
 }
 @media screen and (max-width: 500px) {
-  .articleContent p {
+  .articleContent p, li {
     width: 95%;
     font-size: 16px;
   }
@@ -395,6 +395,44 @@ body {
   }
 }
 
+.ph300 {
+  height: 300px;
+}
+@media screen and (min-width: 2000px) {
+  .ph300 {
+    height: 500px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .ph300 {
+    height: 250px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .ph300 {
+    height: 300px;
+  }
+}
+
+.ph400 {
+  height: 400px;
+}
+@media screen and (min-width: 2000px) {
+  .ph400 {
+    height: 600px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .ph400 {
+    height: 350px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .ph400 {
+    height: 300px;
+  }
+}
+
 .ph500 {
   height: 500px;
 }
@@ -431,6 +469,18 @@ body {
   .ph600 {
     height: 400px;
   }
+}
+@media screen and (max-width: 500px) {
+  .ph600 {
+    height: 300px;
+  }
+}
+
+.albumList {
+  font-family: gitan-latin, sans-serif !important;
+  font-weight: 500 !important;
+  font-style: normal;
+  font-size: 34px !important;
 }
 
 /*# sourceMappingURL=/article.bf8a4bae.css.map */

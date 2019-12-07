@@ -122,7 +122,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../assets/img/memoji.png":[["memoji.27e1c382.png","assets/img/memoji.png"],"assets/img/memoji.png"],"./../assets/img/memoji2.png":[["memoji2.e3836755.png","assets/img/memoji2.png"],"assets/img/memoji2.png"],"./../assets/img/cursorHeart.png":[["cursorHeart.9957c8b2.png","assets/img/cursorHeart.png"],"assets/img/cursorHeart.png"],"./../assets/img/pt.png":[["pt.01a4f08c.png","assets/img/pt.png"],"assets/img/pt.png"],"./../assets/img/lw.png":[["lw.10d2c174.png","assets/img/lw.png"],"assets/img/lw.png"],"./../assets/img/flux.png":[["flux.7c36740a.png","assets/img/flux.png"],"assets/img/flux.png"],"./../assets/img/co.png":[["co.9c106da8.png","assets/img/co.png"],"assets/img/co.png"],"./../assets/img/catb.png":[["catb.0fc47dd4.png","assets/img/catb.png"],"assets/img/catb.png"],"./../assets/img/ba19.png":[["ba19.1437299f.png","assets/img/ba19.png"],"assets/img/ba19.png"],"./../assets/img/code.png":[["code.cb2a02a2.png","assets/img/code.png"],"assets/img/code.png"],"./../assets/img/drum.png":[["drum.58775289.png","assets/img/drum.png"],"assets/img/drum.png"],"./../assets/img/about1.JPG":[["about1.0ebc5cd6.JPG","assets/img/about1.JPG"],"assets/img/about1.JPG"],"./../assets/img/about2.JPG":[["about2.c22813f0.JPG","assets/img/about2.JPG"],"assets/img/about2.JPG"],"_css_loader":"../../../../../usr/local/lib/node_modules/parcel/src/builtins/css-loader.js"}],"../../../../../usr/local/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./..\\assets\\img\\memoji.png":[["memoji.27e1c382.png","assets/img/memoji.png"],"assets/img/memoji.png"],"./..\\assets\\img\\memoji2.png":[["memoji2.e3836755.png","assets/img/memoji2.png"],"assets/img/memoji2.png"],"./..\\assets\\img\\cursorHeart.png":[["cursorHeart.9957c8b2.png","assets/img/cursorHeart.png"],"assets/img/cursorHeart.png"],"./..\\assets\\img\\pt.png":[["pt.01a4f08c.png","assets/img/pt.png"],"assets/img/pt.png"],"./..\\assets\\img\\lw.png":[["lw.10d2c174.png","assets/img/lw.png"],"assets/img/lw.png"],"./..\\assets\\img\\flux.png":[["flux.7c36740a.png","assets/img/flux.png"],"assets/img/flux.png"],"./..\\assets\\img\\co.png":[["co.9c106da8.png","assets/img/co.png"],"assets/img/co.png"],"./..\\assets\\img\\catb.png":[["catb.0fc47dd4.png","assets/img/catb.png"],"assets/img/catb.png"],"./..\\assets\\img\\ba19.png":[["ba19.1437299f.png","assets/img/ba19.png"],"assets/img/ba19.png"],"./..\\assets\\img\\code.png":[["code.cb2a02a2.png","assets/img/code.png"],"assets/img/code.png"],"./..\\assets\\img\\drum.png":[["drum.58775289.png","assets/img/drum.png"],"assets/img/drum.png"],"./..\\assets\\img\\about1.JPG":[["about1.0ebc5cd6.JPG","assets/img/about1.JPG"],"assets/img/about1.JPG"],"./..\\assets\\img\\about2.JPG":[["about2.c22813f0.JPG","assets/img/about2.JPG"],"assets/img/about2.JPG"],"_css_loader":"../../Users/Surface/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../Users/Surface/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -150,7 +150,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50124" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65048" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -326,7 +326,7 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}],"../../../../../usr/local/lib/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{}],"../../Users/Surface/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -358,7 +358,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"../../../../../usr/local/lib/node_modules/parcel/src/builtins/bundle-loader.js":[function(require,module,exports) {
+},{}],"../../Users/Surface/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-loader.js":[function(require,module,exports) {
 var getBundleURL = require('./bundle-url').getBundleURL;
 
 function loadBundlesLazy(bundles) {
@@ -441,7 +441,7 @@ LazyPromise.prototype.catch = function (onError) {
   if (this.promise === null) this.promise = new Promise(this.executor);
   return this.promise.catch(onError);
 };
-},{"./bundle-url":"../../../../../usr/local/lib/node_modules/parcel/src/builtins/bundle-url.js"}],"../../../../../usr/local/lib/node_modules/parcel/src/builtins/loaders/browser/js-loader.js":[function(require,module,exports) {
+},{"./bundle-url":"../../Users/Surface/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../../Users/Surface/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/loaders/browser/js-loader.js":[function(require,module,exports) {
 module.exports = function loadJSBundle(bundle) {
   return new Promise(function (resolve, reject) {
     var script = document.createElement('script');
@@ -464,6 +464,6 @@ module.exports = function loadJSBundle(bundle) {
   });
 };
 },{}],0:[function(require,module,exports) {
-var b=require("../../../../../usr/local/lib/node_modules/parcel/src/builtins/bundle-loader.js");b.register("js",require("../../../../../usr/local/lib/node_modules/parcel/src/builtins/loaders/browser/js-loader.js"));b.load([]);
-},{}]},{},["../../../../../usr/local/lib/node_modules/parcel/src/builtins/hmr-runtime.js",0], null)
+var b=require("../../Users/Surface/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-loader.js");b.register("js",require("../../Users/Surface/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/loaders/browser/js-loader.js"));b.load([]);
+},{}]},{},["../../Users/Surface/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js",0], null)
 //# sourceMappingURL=/style.e0c02e61.js.map

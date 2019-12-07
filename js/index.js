@@ -139,6 +139,13 @@ $(function() {
   });
 });
 
+$(function() {
+  $(".ptJump").on('click', function(e) {
+    e.preventDefault();
+    $(document).scrollTop( $("#ptFinal").offset().top );
+  });
+});
+
 
 
 // Wrap every letter in a span
