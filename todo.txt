@@ -1,6 +1,6 @@
 New to-do:
 
 [ X ] 1). Create pictures for code art
-[   ] 2). Make content for Project Turf
-[   ] 3). Re-format mistakes
+[ X ] 2). Make content for Project Turf
+[ X ] 3). Re-format mistakes
 [   ] 4). Make content for Favorite Albums

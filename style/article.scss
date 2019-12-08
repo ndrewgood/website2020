@@ -389,3 +389,15 @@ body {
     font-style: normal;
     font-size: 34px !important;
 }
+
+.drumVid {
+    @media screen and (max-width: 1000px) {
+        width: 80% !important;
+    }
+    @media screen and (max-width: 800px) {
+        height: 300px !important;
+    }
+    @media screen and (max-width: 800px) {
+        height: 200px !important;
+    }
+}

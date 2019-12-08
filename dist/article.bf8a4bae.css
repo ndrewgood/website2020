@@ -483,4 +483,20 @@ body {
   font-size: 34px !important;
 }
 
+@media screen and (max-width: 1000px) {
+  .drumVid {
+    width: 80% !important;
+  }
+}
+@media screen and (max-width: 800px) {
+  .drumVid {
+    height: 300px !important;
+  }
+}
+@media screen and (max-width: 800px) {
+  .drumVid {
+    height: 200px !important;
+  }
+}
+
 /*# sourceMappingURL=/article.bf8a4bae.css.map */
