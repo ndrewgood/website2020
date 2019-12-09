@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../Users/Surface/AppData/Roaming/npm/node_modules/parcel-bundler/node_modules/process/browser.js":[function(require,module,exports) {
+})({"../../../../../usr/local/lib/node_modules/parcel/node_modules/process/browser.js":[function(require,module,exports) {
 
 // shim for using process in browser
 var process = module.exports = {}; // cached from whatever global is present so that test runners that stub it
@@ -10929,7 +10929,7 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
-},{"process":"../../Users/Surface/AppData/Roaming/npm/node_modules/parcel-bundler/node_modules/process/browser.js"}],"js/index.js":[function(require,module,exports) {
+},{"process":"../../../../../usr/local/lib/node_modules/parcel/node_modules/process/browser.js"}],"js/index.js":[function(require,module,exports) {
 "use strict";
 
 require("jquery");
@@ -11164,7 +11164,7 @@ animationHello();
 animationMoreHello();
 animationHelloM();
 animationMoreHelloM();
-},{"jquery":"node_modules/jquery/dist/jquery.js"}],"../../Users/Surface/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"jquery":"node_modules/jquery/dist/jquery.js"}],"../../../../../usr/local/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -11192,7 +11192,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53752" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59732" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -11368,5 +11368,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../Users/Surface/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/index.js"], null)
+},{}]},{},["../../../../../usr/local/lib/node_modules/parcel/src/builtins/hmr-runtime.js","js/index.js"], null)
 //# sourceMappingURL=/js.00a46daa.js.map
