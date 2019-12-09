@@ -1,0 +1,54 @@
+[debug] [2019-12-09T04:37:15.807Z] ----------------------------------------------------------------------
+[debug] [2019-12-09T04:37:15.810Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-12-09T04:37:15.810Z] CLI Version:   7.9.0
+[debug] [2019-12-09T04:37:15.810Z] Platform:      darwin
+[debug] [2019-12-09T04:37:15.810Z] Node Version:  v12.13.1
+[debug] [2019-12-09T04:37:15.811Z] Time:          Sun Dec 08 2019 23:37:15 GMT-0500 (Eastern Standard Time)
+[debug] [2019-12-09T04:37:15.811Z] ----------------------------------------------------------------------
+[debug] [2019-12-09T04:37:15.811Z] 
+[debug] [2019-12-09T04:37:15.833Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-12-09T04:37:15.834Z] > authorizing via signed-in user
+[debug] [2019-12-09T04:37:15.834Z] [iam] checking project website2020-ebb54 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-12-09T04:37:15.836Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/website2020-ebb54:testIamPermissions  
+
+[debug] [2019-12-09T04:37:16.294Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-09T04:37:16.296Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/website2020-ebb54  
+ 
+[debug] [2019-12-09T04:37:16.772Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'website2020-ebb54'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-12-09T04:37:16.776Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/website2020-ebb54/versions  
+
+[debug] [2019-12-09T04:37:26.128Z] <<< HTTP RESPONSE 200
+[info] i  hosting[website2020-ebb54]: beginning deploy...
+[info] i  hosting[website2020-ebb54]: found 107 files in dist
+[debug] [2019-12-09T04:37:29.589Z] [hosting] hash cache [ZGlzdA] stored for 107 files
+[debug] [2019-12-09T04:37:29.592Z] [hosting][hash queue][FINAL]
+[debug] [2019-12-09T04:37:29.592Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/website2020-ebb54/versions/d8404cab801029c3:populateFiles  
+ <request body omitted>
+[debug] [2019-12-09T04:37:32.197Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-09T04:37:32.207Z] [hosting][populate queue][FINAL]
+[debug] [2019-12-09T04:37:32.207Z] [hosting] uploads queued: 13
+[debug] [2019-12-09T04:37:34.116Z] [hosting][upload queue][FINAL]
+[info] ✔  hosting[website2020-ebb54]: file upload complete
+[debug] [2019-12-09T04:37:34.118Z] [hosting] deploy completed after 7988ms
+[debug] [2019-12-09T04:37:34.211Z] [
+  {
+    "config": {
+      "public": "dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "website2020-ebb54"
+    },
+    "site": "website2020-ebb54",
+    "version": "sites/website2020-ebb54/versions/d8404cab801029c3"
+  }
+]
+[info] i  hosting[website2020-ebb54]: finalizing version...
+[debug] [2019-12-09T04:37:34.212Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/website2020-ebb54/versions/d8404cab801029c3?updateMask=status  
+
