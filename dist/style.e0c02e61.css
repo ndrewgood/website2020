@@ -79,7 +79,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #e8e0cc;
+  background-color: #f7e2b5;
   z-index: -101;
 }
 
@@ -101,7 +101,7 @@ main {
   font-weight: 500;
   font-style: normal;
   font-size: 30px;
-  background-color: #e8e0cc;
+  background-color: #f7e2b5;
 }
 
 .workItem {
@@ -123,7 +123,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #e8e0cc;
+  background-color: #f7e2b5;
 }
 
 .playList {
@@ -550,7 +550,7 @@ main {
 }
 
 .workSection > div {
-  background-color: #e8e0cc;
+  background-color: #f7e2b5;
 }
 
 .playText2 {
