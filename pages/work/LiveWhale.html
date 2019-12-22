@@ -19,12 +19,18 @@
     <link rel="stylesheet" href="../../style/border.scss">
     <link rel="stylesheet" href="../../style/mobile.scss">
     <link rel="stylesheet" href="../../style/article.scss">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <title>LiveWhale - @ndrewgood</title>
 </head>
 <body>
+  <script>
+    AOS.init();
+  </script>
   <div class="menuContainer">
     <div class="mNavTop border-bottom">
       <div class="mNavTopBlock border-right">menu</div>
@@ -80,7 +86,7 @@
 
 <h1>LiveWhale</h1>
 <h2>De-stigmatizing mental health resources for students</h2>
-<div class="fullWidthImage ph500" style="background-image: url(../../assets/img/lw.png);"></div>
+<div class="fullWidthImage ph500" data-aos="fade-in" data-aos-duration="800" style="background-image: url(../../assets/img/lw.png);"></div>
 <p>Fall 2018</p>
 <p>Timeframe: 24 hours</p>
 <p>Group Members: Andrew Goodridge, <a href="https://www.wyattmichel.com/" target="_blank">Wyatt Michel</a>, <a href="https://www.linkedin.com/in/akashshah7/" target="_blank">Akash Shah</a></p>
@@ -100,11 +106,11 @@
 </p>
 <div class="halfBreak"></div>
 <p>We created three different components to directly combat each issue:</p>
-<div class="halfWidthImage ph600" style="background-image: url(../../assets/img/lw-map.png);"></div>
+<div class="halfWidthImage ph600" data-aos="fade-left" style="background-image: url(../../assets/img/lw-map.png);"></div>
 <p><strong>Support Rooms​:</strong> a group of chat rooms with topics relating to specific mental health problems which can be discussed​. Example topics can vary from depression to time management to relationships. Each Support Room is moderated by a mental health counselor for better security and student support.​ These counselors will lead the discussion in the Support Rooms​.</p>
-<div class="halfWidthImage ph600" style="background-image: url(../../assets/img/lw-chatroom.png);"></div>
+<div class="halfWidthImage ph600" data-aos="fade-right" style="background-image: url(../../assets/img/lw-chatroom.png);"></div>
 <p><strong>Local Events and Sessions​:</strong> a campus map which shows local mental/physical health-related events in your area happening now and in the future.​ Events and sessions range from group therapy sessions to social events​. Signing up for these events is a seamless and easy process, not requiring having to contact anyone or fill in any forms</p>
-<div class="halfWidthImage ph600" style="background-image: url(../../assets/img/lw-counsel.png);"></div>
+<div class="halfWidthImage ph600" data-aos="fade-left" style="background-image: url(../../assets/img/lw-counsel.png);"></div>
 <p><strong>One-on-One Counseling​:</strong> a step-by-step questionnaire made so applicants are not overwhelmed or confused during the process of collecting information. Matches users with a specialist/college counselor and quickly sets up appointments with them.</p>
 
 <div class="break"></div>
@@ -113,7 +119,7 @@
 <p>We then started collaborating on a sitemap which would guide users through the app and its components. Our scope initially was very macro, not spending too much time diving into each component.</p>
 <p>After we had the general layout of the app, we split up and each took one of the three components, diving into our assigned component at a low-fidelity scale. I was tasked with the “Support Rooms” section of the app. I had initially thought of this component during the early stages of the app so I had many ideas for this section that I was ready to test out and implement. One of my first ideas was to list the support rooms in a block grid, as opposed to a standard bulleted list. Originally I was going to make a series of illustrations for each support room to go with their specific topic, however due to a lack of time I had to keep the illustrations very abstract and simple. I came across many similar conflicts during this part of the process, having simplify my elaborate ideas for the greater good of the entire app.</p>
 <div class="halfBreak"></div>
-<div class="fullWidthImage ph500" style="background-image: url(../../assets/img/lw-notes.png);"></div>
+<div class="fullWidthImage ph500" data-aos="fade-in" style="background-image: url(../../assets/img/lw-notes.png);"></div>
 <p class="caption">a selection of lo-fi wireframes/sitemaps each of us made</p>
 <div class="halfBreak"></div>
 <p>After we each finished our wireframes, we regrouped and critiqued each of our components, later revising certain parts of our components. We then made some universal design decisions before creating a high-fidelity mock-up of the app.</p>
