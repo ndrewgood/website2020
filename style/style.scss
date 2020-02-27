@@ -82,7 +82,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f7e2b5;
+    background-color: #f5d7d7;
     z-index: -101;
 }
 
@@ -104,7 +104,7 @@ main {
     font-weight: 500;
     font-style: normal;
     font-size: 30px;
-    background-color: #f7e2b5;
+    background-color: #f5d7d7;
 }
 
 .workItem {
@@ -126,7 +126,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f7e2b5;
+    background-color: #f5d7d7;
 }
 
 .playList {
@@ -181,7 +181,7 @@ main {
 .aboutContent p {
     width: 80vw !important;
     margin: auto;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .aboutContent div {
@@ -327,7 +327,7 @@ main {
 }
 
 .hoverFLUX > div {
-    background-image: url(../assets/img/flux.png);
+    background-image: url(../assets/img/fluxFeb2.png);
     background-size: contain;
     background-repeat: no-repeat;
     height: 90%;
@@ -337,11 +337,11 @@ main {
 }
 
 .hoverCO {
-    background-color: #ebcb90 !important;
+    background-color: #F2D49C !important;
 }
 
 .hoverCO > div {
-    background-image: url(../assets/img/co.png);
+    background-image: url(../assets/img/coFeb2.png);
     background-size: contain;
     background-repeat: no-repeat;
     height: 90%;
@@ -533,7 +533,7 @@ main {
 }
 
 .workSection > div {
-    background-color: #f7e2b5;
+    background-color: #f5d7d7;
 }
 
 .playText2 {
@@ -557,7 +557,7 @@ main {
 
 .aboutPara {
     width: 100%;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 1.5em;
 }
 

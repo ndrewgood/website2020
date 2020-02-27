@@ -243,6 +243,21 @@ body {
   margin-bottom: 20px;
 }
 
+.fullWidthVideo {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 80vw;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.fullWidthVideo video {
+  object-fit: scale-down;
+  width: 80vw;
+  max-width: 950px !important;
+}
+
 .articleContent a {
   text-decoration: underline;
   color: black;
